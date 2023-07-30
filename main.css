@@ -1,0 +1,35 @@
+:root{
+    --color-primary:#0d6efd;
+    --color-secondary:#19ac5b;
+    --color-accent:#6c757d;
+    --color-text: #212529;
+}
+
+.container-second{
+    background-color: var(--color-primary);
+    color: white;
+    padding-left: min(8vw, 8vh);
+    padding-right: min(8vw, 8vh);
+    padding-top: min(3vw, 3vh);
+    padding-bottom: min(3vw, 3vh);
+    font-size: clamp(1.5vw, 25px ,1.5vh);
+}
+
+.container-center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: var(--color-secondary);
+    padding-left: 8vw;
+    padding-right: 8vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    color: white;
+}
+
+body{
+    background-color: #ffeeff;
+    font-family: Verdana, Tahoma, sans-serif;
+}

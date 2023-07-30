@@ -1,0 +1,10 @@
+{
+    "sharpflatpreference": "custom",
+    "customsharpflatprefernce": {
+        "C#|Db": "sharp",
+        "D#|Eb": "flat",
+        "F#|Gb": "sharp",
+        "G#|Ab": "sharp",
+        "A#|Bb": "flat"
+    }
+}

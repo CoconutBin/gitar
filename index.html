@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script defer src="./js/index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Chord Detector</title>
+</head>
+
+<body>
+    <form id="detectChordinput" class="container-center">
+        <input type="text" id="fingering">
+        <div>
+            <label for="choosebassnote">Change Bass Note</label>
+            <select name="None" id="choosebassnote">
+                <option value="None" selected></option>
+                <option value="C">C</option>
+                <option value="C#/Db">C#/Db</option>
+                <option value="D">D</option>
+                <option value="D#/Eb">D#/Eb</option>
+                <option value="E">E</option>
+                <option value="F">F</option>
+                <option value="F#/Gb">F#/Gb</option>
+                <option value="G">G</option>
+                <option value="G#/Ab">G#/Ab</option>
+                <option value="A">A</option>
+                <option value="A#/Bb">A#/Bb</option>
+                <option value="B">B</option>
+            </select>
+        </div>
+        <div>
+            <label for="changeinstrument">Change Instrument
+                <select name="None" id="changeinstrument">
+                    <optgroup label="Guitar">
+                        <option value="HalfDown6String">Half-Step Down 6 String (Eb Ab Db Gb Bb Eb)</option>
+                        <option value="Standard6String" selected>Standard 6 String (E A D G B E)</option>
+                        <option value="Standard7String">Standard 7 String (B E A D G B E)</option>
+                    </optgroup>
+                    <optgroup label="Bass">
+                        <option value="Standard4String">Standard 4 String (E A D G)</option>
+                    </optgroup>
+                    <optgroup label="Ukelele">
+                        <option value="Standard4String">Standard 4 String (G C E A)</option>
+                    </optgroup>
+                    <optgroup label="Banjo">
+                        <option value="OpenG">"Open G" 5 String (G D G B D)</option>
+                        <option value="Usual4String">4 String (C G B D)</option>
+                    </optgroup>
+                </select>
+            </label>
+        </div>
+    </form>
+    <div id="chordresults" class="container-second" style="position: absolute; top: 60%; left: 50%; transform: translate(-50%); ;">
+    No Input
+    </div>
+</body>
+
+</html>

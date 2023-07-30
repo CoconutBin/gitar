@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "lib": ["DOM","ESNext"],
+        "outDir": "../js",
+        "outFile": "../js/index.js"
+    }
+}
