@@ -13,6 +13,10 @@
     padding-top: min(3vw, 3vh);
     padding-bottom: min(3vw, 3vh);
     font-size: clamp(1.5vw, 25px ,1.5vh);
+    position: absolute; 
+    top: 60%; 
+    left: 50%; 
+    transform: translate(-50%); 
 }
 
 .container-center{

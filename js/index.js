@@ -366,6 +366,7 @@ const detectChordinputForm = {
 const chordResults = fromID("chordresults");
 let bassNoteUsed = detectChordinputForm.bassNote.options[detectChordinputForm.bassNote.selectedIndex].value;
 let fingeringUsed = detectChordinputForm.fingering.value;
+let xamount = "x-x-x-x-x-x";
 detectChordinputForm.bassNote.addEventListener("input", () => {
     bassNoteUsed = detectChordinputForm.bassNote.options[detectChordinputForm.bassNote.selectedIndex].value;
     if (bassNoteUsed.match(/.#\/.b/)) {
@@ -377,7 +378,12 @@ detectChordinputForm.instrument.addEventListener("input", () => {
     const instrumentType = detectChordinputForm.instrument.options[detectChordinputForm.instrument.selectedIndex].parentElement.label;
     const instrumentSelected = detectChordinputForm.instrument.options[detectChordinputForm.instrument.selectedIndex].value;
     instrument = InstrumentPresets[instrumentType][instrumentSelected];
-    console.log(`instrumentUsed: ${instrument}`);
+    xamount = [];
+    for (let string in instrument) {
+        xamount.push("x");
+    }
+    xamount = xamount.join("-");
+    console.log(`instrumentUsed: ${instrumentSelected} (${instrument})`);
 });
 detectChordinputForm.fingering.addEventListener("input", () => {
     fingeringUsed = detectChordinputForm.fingering.value;
@@ -391,7 +397,7 @@ detectChordinput.addEventListener('input', () => {
             console.log(chordDetected);
         }
         catch (e) {
-            `Fingering Invalid or Bassnote invalid: Fingering must be in the form x-x-x-x-x-x or Bassnote is not in chord`;
+            `Fingering Invalid or Bassnote invalid: Fingering must be in the form ${xamount} or Bassnote is not in chord`;
         }
     }
     else if (bassNoteUsed != null) {
@@ -400,7 +406,7 @@ detectChordinput.addEventListener('input', () => {
             console.log(chordDetected);
         }
         catch (e) {
-            chordResults.innerHTML = `Fingering Invalid: Fingering must be in the form x-x-x-x-x-x`;
+            chordResults.innerHTML = `Fingering Invalid: Fingering must be in the form ${xamount}`;
         }
     }
     else { }
